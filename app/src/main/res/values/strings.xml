@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Mi_primer_proyecto_android_studio</string>
+    <string name="BASE_API_URL">https://miapi.com</string>
+</resources>
