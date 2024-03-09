@@ -1,10 +1,11 @@
 package com.example.clase_practica_1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mpas.R;
 
@@ -26,8 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         btnCalculate.setOnClickListener(view -> {
             int num1 = Integer.parseInt(edtNum1.getText().toString());
-            int num2 = Integer.parseInt(edtNum1.getText().toString());
-            System.out.println("la suma es: " + (num1 + num2));
+            int num2 = Integer.parseInt(edtNum2.getText().toString());
+            int sum = num1 + num2;
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("La suma de los numeros " + num1 + " y " + num2 + " es:")
+                    .setMessage(String.valueOf(sum))
+                    .show();
         });
     }
 }
